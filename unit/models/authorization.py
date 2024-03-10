@@ -35,7 +35,7 @@ class AuthorizationDTO(object):
                                 attributes.get("paymentMethod"), attributes.get("digitalWallet"),
                                 attributes.get("cardVerificationData"), attributes.get("cardNetwork"),
                                 attributes.get("tags"), relationships, attributes["merchant"].get("id"),
-                                attributes.get("declineReason"), attributes.get("cashWithdrawalAmount"))
+                                attributes.get("declineReason"), attributes.get("cashWithdrawalAmount")), RichMerchantData.from_json_api(attributes.get("richMerchantData"))
 
 
 class ListAuthorizationParams(UnitParams):
